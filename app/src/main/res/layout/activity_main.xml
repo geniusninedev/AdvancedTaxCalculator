@@ -1,0 +1,1540 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:title="@string/app_name" />
+
+    <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+
+    <FrameLayout
+        android:id="@+id/containerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ffffff">
+
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_gravity="center">
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="Income Tax Year "
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/incometaxTextviewid"
+                        android:textColor="#000000"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:text="2017-2018 "
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#234F1E"
+                        android:layout_weight="1.8"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="25dp"
+                        android:text="Gender"
+                        android:layout_width="213dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/gendertextviewid"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:layout_marginTop="25dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/genderspinnerid"
+                        android:layout_weight="2" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/incometaxsalaryid"
+                        android:layout_gravity="center"
+                        android:typeface="serif"
+
+                        android:filterTouchesWhenObscured="true"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Income Tax from Salary:"/>
+
+                    <EditText
+                        android:layout_marginTop="5dp"
+                        android:layout_height="35dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:maxLength="12"
+                        android:id="@+id/incometaxedittextid"
+                        android:layout_gravity="right"
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:textColor="@android:color/black"
+                        android:textAlignment="center"
+                        android:inputType="numberDecimal"
+                        android:fadingEdgeLength="20dp"
+                        android:hint="Enter  Amount.."
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="25dp"
+                        android:background="@android:color/darker_gray"
+
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.97"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Calculation of Income From House Property"/>
+                    </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Interest on Housing Loan:"/>
+
+                    <EditText
+                        android:layout_height="35dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:maxLength="12"
+                        android:id="@+id/intersetonhousingloanedittextid"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:textColor="@android:color/black"
+                        android:textAlignment="center"
+                        android:inputType="numberDecimal"
+                        android:fadingEdgeLength="10dp"
+                        android:hint="housing loan.."
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="3"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Income from Self-occupied House Property:"/>
+
+                    <EditText
+                        android:layout_height="35dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:maxLength="12"
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:id="@+id/interestonselfoccupiededittext"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:textColor="@android:color/black"
+                        android:textAlignment="center"
+                        android:inputType="numberDecimal"
+                        android:fadingEdgeLength="10dp"
+                        android:hint="self-occupied property.."
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.80"
+                        android:typeface="serif"
+                        android:inputType="numberDecimal"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Annual Letable Value:"/>
+
+                    <EditText
+                        android:layout_height="35dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:maxLength="12"
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:layout_marginTop="5dp"
+                        android:hint="letable value.."
+                        android:id="@+id/annualliablevalueedittextid"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:textColor="@android:color/black"
+                        android:textAlignment="center"
+                        android:inputType="numberDecimal"
+                        android:fadingEdgeLength="10dp"
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:typeface="serif"
+                        android:inputType="numberDecimal"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Municipal Taxes:"
+                        android:layout_weight="0.25" />
+
+                    <EditText
+                        android:layout_marginTop="5dp"
+                        android:hint="Municipal taxes.."
+                        android:layout_height="35dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:id="@+id/muncipaltaxesedittextid"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:maxLength="12"
+                        android:textColor="@android:color/black"
+                        android:textAlignment="center"
+                        android:inputType="numberDecimal"
+                        android:fadingEdgeLength="10dp"
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.97"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Unrealized Rent:"/>
+
+                    <EditText
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:maxLength="12"
+                        android:hint="Unrealized Rent..."
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/unrealizedrentedittextid"
+                        android:textAlignment="center"
+                        android:inputType="numberDecimal"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:fadingEdgeLength="10dp"
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.97"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Net Annual Value:"/>
+
+                    <EditText
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:maxLength="12"
+                        android:gravity="center"
+                        android:hint="Net Annual Value..."
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/netincomevalueedittextid"
+                        android:textAlignment="center"
+                        android:inputType="numberDecimal"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:fadingEdgeLength="10dp"
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.97"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Standard Deduction @30% of Net Annual Value:"/>
+
+                    <EditText
+                        android:layout_height="35dp"
+                        android:maxLength="12"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:hint="Standard Deduction..."
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/standarddeductionedittextid"
+                        android:textAlignment="center"
+                        android:inputType="numberDecimal"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:fadingEdgeLength="10dp"
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.97"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Interest on Housing Loan:"/>
+
+                    <EditText
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:maxLength="12"
+                        android:hint="Housing Loan..."
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/interestonhousingedittextid"
+                        android:textAlignment="center"
+                        android:inputType="numberDecimal"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:fadingEdgeLength="10dp"
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.97"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Income from Let-out House Property:"/>
+
+                    <EditText
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:maxLength="12"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:hint="Let-out House Property..."
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/interestfromletoutedittextid"
+                        android:textAlignment="center"
+                        android:inputType="numberDecimal"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:fadingEdgeLength="10dp"
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.97"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Total House Property:"/>
+
+                    <EditText
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:maxLength="12"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:hint="Total house property..."
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/totalhousetextid"
+                        android:textAlignment="center"
+                        android:inputType="numberDecimal"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:fadingEdgeLength="10dp"
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_width="match_parent"
+
+                        android:layout_gravity="center"
+                        android:layout_weight="2.97"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="CapitalGains:"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:textColor="#000000"
+                        android:typeface="serif"
+                        android:textStyle="bold"
+                        android:hint="capitalgains.."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="shortterm(111A):"/>
+
+                    <EditText
+                        android:layout_marginTop="15dp"
+                        android:layout_height="35dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:maxLength="12"
+                        android:id="@+id/shortterm1edittextid"
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:textColor="@android:color/black"
+                        android:textAlignment="center"
+                        android:hint="capitalgains.."
+                        android:inputType="numberDecimal"
+                        android:fadingEdgeLength="10dp"
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="shortterm(non 111A):"/>
+
+                    <EditText
+                        android:layout_height="35dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:maxLength="12"
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/shortterm2edittextid"
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:textColor="@android:color/black"
+                        android:textAlignment="center"
+                        android:hint="capitalgains.."
+                        android:inputType="numberDecimal"
+                        android:fadingEdgeLength="10dp"
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/surchargetextviewid"
+                        android:layout_gravity="center"
+                        android:layout_weight="3"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="longterm(Charged to tax @20%):"/>
+
+                    <EditText
+                        android:layout_height="35dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:maxLength="12"
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/longterm1edittextid123"
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:textColor="@android:color/black"
+                        android:textAlignment="center"
+                        android:inputType="numberDecimal"
+                        android:fadingEdgeLength="10dp"
+                        android:hint="capitalgains.."
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.80"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="longterm(Charged to tax @10%):"/>
+
+                    <EditText
+                        android:layout_height="35dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:maxLength="12"
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/longterm2edittextid"
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:hint="capitalgains.."
+                        android:textColor="@android:color/black"
+                        android:textAlignment="center"
+                        android:inputType="numberDecimal"
+                        android:fadingEdgeLength="10dp"
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:textColor="#000000"
+                        android:typeface="serif"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Total capitalgain:"
+                        android:layout_weight="0.25" />
+
+                    <EditText
+                        android:layout_marginTop="15dp"
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:layout_height="35dp"
+                        android:maxLength="12"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:id="@+id/totalcapitalgainedittextid"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:hint="total capitalgain.."
+                        android:textColor="@android:color/black"
+                        android:textAlignment="center"
+                        android:inputType="numberDecimal"
+                        android:fadingEdgeLength="10dp"
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.97"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Income From Other Sources:"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.97"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Interest:"/>
+
+                    <EditText
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:maxLength="12"
+                        android:hint="interest..."
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/interestedittextid"
+                        android:textAlignment="center"
+                        android:layout_gravity="right"
+                        android:inputType="numberDecimal"
+                        android:layout_weight="2"
+                        android:fadingEdgeLength="10dp"
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.97"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Commission:"/>
+
+                    <EditText
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:maxLength="12"
+                        android:hint="commission..."
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/Commissionedittextid"
+                        android:textAlignment="center"
+                        android:layout_gravity="right"
+                        android:inputType="numberDecimal"
+                        android:layout_weight="2"
+                        android:fadingEdgeLength="10dp"
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.97"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Winning From Lottery,Crossword Puzzles, etc:"/>
+
+                    <EditText
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:maxLength="12"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:hint="Lottery..."
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/Lotteryedittextid"
+                        android:textAlignment="center"
+                        android:inputType="numberDecimal"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:fadingEdgeLength="10dp"
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.97"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Total other Sources:"/>
+
+                    <EditText
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:maxLength="12"
+                        android:hint="Total Other Sources..."
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/totalotheredittextid"
+                        android:textAlignment="center"
+                        android:inputType="numberDecimal"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:fadingEdgeLength="10dp"
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.97"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Total nettax:"/>
+
+                    <EditText
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:maxLength="12"
+                        android:hint="Total Net Tax..."
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/totalnettaxedittextid"
+                        android:textAlignment="center"
+                        android:inputType="numberDecimal"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:fadingEdgeLength="10dp"
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/incometaxrelieftextviewid"
+                        android:layout_gravity="center"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Income Tax After Relief:"/>
+
+                    <EditText
+                        android:layout_height="35dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:maxLength="12"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/incometaxreliefedittextid"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:textColor="@android:color/black"
+                        android:textAlignment="center"
+                        android:inputType="numberDecimal"
+                        android:fadingEdgeLength="10dp"
+                        android:hint="tax.."
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="3"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Surcharge:"/>
+
+                    <EditText
+                        android:layout_height="35dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:maxLength="12"
+                        android:layout_marginTop="5dp"
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:id="@+id/surchargeedittextid123"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:textColor="@android:color/black"
+                        android:textAlignment="center"
+                        android:inputType="numberDecimal"
+                        android:fadingEdgeLength="10dp"
+                        android:hint="tax.."
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/educationcesstextviewid"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.80"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Education Cess:"/>
+
+                    <EditText
+                        android:layout_height="35dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:maxLength="12"
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:layout_marginTop="5dp"
+                        android:hint="Educationcess.."
+                        android:id="@+id/educationcessedittextid"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:textColor="@android:color/black"
+                        android:textAlignment="center"
+                        android:inputType="numberDecimal"
+                        android:fadingEdgeLength="10dp"
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/higherandseceducesstextviewid"
+                        android:layout_gravity="center"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Higher And Secondary Education Cess:"
+                        android:layout_weight="0.25" />
+
+                    <EditText
+                        android:layout_marginTop="5dp"
+                        android:hint="Higher EducationCess.."
+                        android:layout_height="35dp"
+                        android:maxLength="12"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:id="@+id/higherandseceducessedittextid"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:textColor="@android:color/black"
+                        android:textAlignment="center"
+                        android:inputType="numberDecimal"
+                        android:fadingEdgeLength="10dp"
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        android:layout_marginLeft="2dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:id="@+id/totalrelieftextviewid"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="2.97"
+                        android:typeface="serif"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" Total Relief:"/>
+
+                    <EditText
+                        android:layout_height="35dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:maxLength="12"
+                        android:hint="Total relief"
+                        android:background="@android:drawable/editbox_background"
+                        android:filterTouchesWhenObscured="true"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/totalreliefedittextid"
+                        android:textAlignment="center"
+                        android:layout_gravity="right"
+                        android:layout_weight="2"
+                        android:inputType="numberDecimal"
+                        android:fadingEdgeLength="10dp"
+                        android:ems="10"> </EditText>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:id="@+id/buttoncalculate"
+                android:gravity="center"
+                android:text="Calculate"
+                android:background="#2E86C1"
+                android:visibility="visible"
+                android:longClickable="true"
+                android:fadingEdge="vertical"
+                android:onClick="CalCulateIncomeTax"
+                android:layout_marginTop="35dp"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:layout_marginLeft="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="2.97"
+                    android:typeface="serif"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Tax Liabilities"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:layout_marginLeft="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:typeface="serif"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Tax Payable Upto June"/>
+
+                <TextView
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+
+                    android:textColor="@android:color/black"
+                    android:id="@+id/firstedittextid"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:inputType="numberDecimal"
+                    android:fadingEdgeLength="10dp"
+                    android:ems="10"> </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:layout_marginLeft="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:typeface="serif"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Tax Payable Upto Sep"/>
+
+                <TextView
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+
+                    android:textColor="@android:color/black"
+                    android:id="@+id/secondedittextid"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:inputType="numberDecimal"
+                    android:fadingEdgeLength="10dp"
+                    android:ems="10"> </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:layout_marginLeft="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:typeface="serif"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Tax Payable Upto Dec"/>
+
+                <TextView
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+
+                    android:textColor="@android:color/black"
+                    android:id="@+id/thirdedittextid"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:inputType="numberDecimal"
+                    android:fadingEdgeLength="10dp"
+                    android:ems="10"> </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:layout_marginLeft="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:typeface="serif"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Tax Payable Upto Mar"/>
+
+                <TextView
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+
+                    android:textColor="@android:color/black"
+                    android:id="@+id/fourthedittextid"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:inputType="numberDecimal"
+                    android:fadingEdgeLength="10dp"
+                    android:ems="10"> </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:layout_marginLeft="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:typeface="serif"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Tax Payable Upto Mar"/>
+
+                <TextView
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/fivthedittext"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:inputType="numberDecimal"
+                    android:fadingEdgeLength="10dp"
+                    android:ems="10"> </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:layout_marginLeft="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="2.97"
+                    android:typeface="serif"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Installments"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:layout_marginLeft="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:typeface="serif"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="first Installment"/>
+
+                <TextView
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:id="@+id/firstIedittext"
+                    android:textColor="@android:color/black"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:inputType="numberDecimal"
+                    android:fadingEdgeLength="10dp"
+                    android:ems="10"> </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:layout_marginLeft="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:typeface="serif"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Seconed Installment"/>
+
+                <TextView
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:id="@+id/secondIedittext"
+                    android:textColor="@android:color/black"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:inputType="numberDecimal"
+                    android:fadingEdgeLength="10dp"
+                    android:ems="10"> </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:layout_marginLeft="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:typeface="serif"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="third Installment "/>
+
+                <TextView
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:id="@+id/thirdIedittext"
+                    android:textColor="@android:color/black"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:inputType="numberDecimal"
+                    android:fadingEdgeLength="10dp"
+                    android:ems="10"> </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:layout_marginLeft="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:typeface="serif"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Fourth Installment"/>
+
+                <TextView
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+
+                    android:textColor="@android:color/black"
+                    android:id="@+id/fourthiedittextid"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:inputType="numberDecimal"
+                    android:fadingEdgeLength="10dp"
+                    android:ems="10"> </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:layout_marginLeft="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:typeface="serif"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="fivth Installment"/>
+
+                <TextView
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/fivthiedittext"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:inputType="numberDecimal"
+                    android:fadingEdgeLength="10dp"
+                    android:ems="10"> </TextView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    </FrameLayout>
+
+
+        <android.support.design.widget.NavigationView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/shitstuff"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginTop="-24dp"
+            android:fontFamily="monospace"
+            android:maxLines="1"
+            android:background="#ffffff"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="22sp"
+            app:itemTextColor="#000000"
+            app:headerLayout="@layout/nav_header_main"
+            app:menu="@menu/drawermenu"
+            />
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
