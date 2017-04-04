@@ -28,6 +28,7 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 
 import android.widget.Button;
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
     AdvancedTaxMain income;
     EditText incometaxsalary,housingloan,selfoccupied,letablevalue,municipaltaxes,unrealizedrent,netincome,standarddeduction,
             interestonhousing1,totalhousedittextid, shortterm1,shortterm2,lonterm1,longterm2,totalcapitalgain,interest,commision,lotery,
-            totalothersources,reliefedittext, surchargeedittext, educationedittext, higherandseceducationcessedittext, totalreliefedittext,totalnet,amountofint;
+            totalothersources,reliefedittext, surchargeedittext, educationedittext, higherandseceducationcessedittext, totalreliefedittext,totalnet,amountofint,letout;
 
 
 
@@ -89,70 +90,75 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         DecimalFormat f = new DecimalFormat("##.00");
         Configuration config = getResources().getConfiguration();
 
         genderspinner = (Spinner) findViewById(R.id.genderspinnerid);
-        incometaxsalary = (EditText) findViewById(R.id.incometaxedittextid);
-        housingloan = (EditText) findViewById(R.id.intersetonhousingloanedittextid);
+        incometaxsalary=(EditText)findViewById(R.id.incometaxedittextid);
+        housingloan=(EditText)findViewById(R.id.intersetonhousingloanedittextid);
         housingloan.setText("0");
-        selfoccupied = (EditText) findViewById(R.id.interestonselfoccupiededittext);
-        selfoccupied.setText("0");
+        selfoccupied=(EditText)findViewById(R.id.interestonselfoccupiededittext);
+        selfoccupied.setEnabled(false);
         Button buttonCalculte = (Button) findViewById(R.id.buttoncalculate);
-        letablevalue = (EditText) findViewById(R.id.annualliablevalueedittextid);
+        letablevalue=(EditText)findViewById(R.id.annualliablevalueedittextid);
         letablevalue.setText("0");
-        municipaltaxes = (EditText) findViewById(R.id.muncipaltaxesedittextid);
+        municipaltaxes=(EditText)findViewById(R.id.muncipaltaxesedittextid);
         municipaltaxes.setText("0");
-        unrealizedrent = (EditText) findViewById(R.id.unrealizedrentedittextid);
+        unrealizedrent =(EditText)findViewById(R.id.unrealizedrentedittextid);
         unrealizedrent.setText("0");
-        netincome = (EditText) findViewById(R.id.netincomevalueedittextid);
-        netincome.setText("0");
-        standarddeduction = (EditText) findViewById(R.id.standarddeductionedittextid);
-        standarddeduction.setText("0");
-        interestonhousing1 = (EditText) findViewById(R.id.interestonhousingedittextid);
+        netincome =(EditText)findViewById(R.id.netincomevalueedittextid);
+        netincome.setEnabled(false);
+        standarddeduction =(EditText)findViewById(R.id.standarddeductionedittextid);
+        standarddeduction.setEnabled(false);
+        interestonhousing1 =(EditText)findViewById(R.id.interestonhousingedittextid);
         interestonhousing1.setText("0");
-        totalhousedittextid = (EditText) findViewById(R.id.totalhousetextid);
-        totalhousedittextid.setText("0");
-        shortterm1 = (EditText) findViewById(R.id.shortterm1edittextid);
+        totalhousedittextid =(EditText)findViewById(R.id.totalhousetextid);
+        totalhousedittextid.setEnabled(false);
+        shortterm1=(EditText)findViewById(R.id.shortterm1edittextid);
         shortterm1.setText("0");
-        shortterm2 = (EditText) findViewById(R.id.shortterm2edittextid);
+        shortterm2=(EditText)findViewById(R.id.shortterm2edittextid);
         shortterm2.setText("0");
-        lonterm1 = (EditText) findViewById(R.id.longterm1edittextid123);
+        lonterm1=(EditText)findViewById(R.id.longterm1edittextid123);
         lonterm1.setText("0");
-        longterm2 = (EditText) findViewById(R.id.longterm2edittextid);
+        longterm2=(EditText)findViewById(R.id.longterm2edittextid);
         longterm2.setText("0");
-        totalcapitalgain = (EditText) findViewById(R.id.totalcapitalgainedittextid);
-        totalcapitalgain.setText("0");
-        interest = (EditText) findViewById(R.id.interestedittextid);
+        totalcapitalgain=(EditText)findViewById(R.id.totalcapitalgainedittextid);
+        totalcapitalgain.setEnabled(false);
+        interest=(EditText)findViewById(R.id.interestedittextid);
         interest.setText("0");
-        commision = (EditText) findViewById(R.id.Commissionedittextid);
+        commision=(EditText)findViewById(R.id.Commissionedittextid);
         commision.setText("0");
-        lotery = (EditText) findViewById(R.id.Lotteryedittextid);
+        lotery= (EditText)findViewById(R.id.Lotteryedittextid);
         lotery.setText("0");
-        totalothersources = (EditText) findViewById(R.id.totalotheredittextid);
-        totalothersources.setText("0");
+        totalothersources=(EditText)findViewById(R.id.totalotheredittextid);
+        totalothersources.setEnabled(false);
         reliefedittext = (EditText) findViewById(R.id.incometaxreliefedittextid);
-        reliefedittext.setText("0");
+        reliefedittext.setEnabled(false);
         surchargeedittext = (EditText) findViewById(R.id.surchargeedittextid123);
-        surchargeedittext.setText("0");
+        surchargeedittext.setEnabled(false);
         educationedittext = (EditText) findViewById(R.id.educationcessedittextid);
-        educationedittext.setText("0");
+        educationedittext.setEnabled(false);
         higherandseceducationcessedittext = (EditText) findViewById(R.id.higherandseceducessedittextid);
-        higherandseceducationcessedittext.setText("0");
+        higherandseceducationcessedittext.setEnabled(false);
         totalreliefedittext = (EditText) findViewById(R.id.totalreliefedittextid);
-        totalreliefedittext.setText("0");
-        totalnet = (EditText) findViewById(R.id.totalnettaxedittextid);
-        totalnet.setText("0");
-        first = (TextView) findViewById(R.id.firstedittextid);
-        second = (TextView) findViewById(R.id.secondedittextid);
-        third = (TextView) findViewById(R.id.thirdedittextid);
-        fourth = (TextView) findViewById(R.id.fourthedittextid);
-        fivth = (TextView) findViewById(R.id.fivthedittext);
-        firstI = (TextView) findViewById(R.id.firstIedittext);
-        secondI = (TextView) findViewById(R.id.secondIedittext);
-        thirdI = (TextView) findViewById(R.id.thirdIedittext);
-        fourthI = (TextView) findViewById(R.id.fourthiedittextid);
-        fivthI = (TextView) findViewById(R.id.fivthiedittext);
+        totalreliefedittext.setEnabled(false);
+        totalnet=(EditText)findViewById(R.id.totalnettaxedittextid);
+        totalnet.setEnabled(false);
+        letout=(EditText)findViewById(R.id.interestfromletoutedittextid);
+        letout.setText("0");
+        first=(TextView)findViewById(R.id.firstedittextid);
+        second=(TextView)findViewById(R.id.secondedittextid);
+        third=(TextView)findViewById(R.id.thirdedittextid);
+        fourth=(TextView)findViewById(R.id.fourthedittextid);
+        fivth=(TextView)findViewById(R.id.fivthedittext);
+        firstI=(TextView)findViewById(R.id.firstIedittext);
+        secondI=(TextView)findViewById(R.id.secondIedittext);
+        thirdI=(TextView)findViewById(R.id.thirdIedittext);
+        fourthI=(TextView)findViewById(R.id.fourthiedittextid);
+        fivthI=(TextView)findViewById(R.id.fivthiedittext);
+        Button buttonhelp = (Button) findViewById(R.id.advancetaxhelp);
+
 
 
 
@@ -298,7 +304,7 @@ public class MainActivity extends AppCompatActivity {
                     surchargeedittext.setText(String.valueOf((f.format(surchargeValue))));
                     higherandseceducationcessedittext.setText(String.valueOf((f.format(highereducationalcess))));
                     totalreliefedittext.setText(String.valueOf((f.format(incomerelief + educationalcess + highereducationalcess + surchargeValue))));
-                   double i= income.uptoJune();
+                    double i= income.uptoJune();
                     first.setText(String.valueOf(f.format(i)));
                     second.setText(String.valueOf(f.format(income.uptoSep())));
                     third.setText(String.valueOf(f.format(income.uptoDec())));
@@ -315,7 +321,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        buttonhelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Intent helpref = new Intent(MainActivity.this,AdvancedTaxHelp.class);
+                startActivity(helpref);
+            }
+        });
     }
     ///Uploading contacts to azure
     private void uploadContactsToAzure(){
