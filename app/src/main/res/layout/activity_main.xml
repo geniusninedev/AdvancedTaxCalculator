@@ -2,6 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
@@ -46,6 +47,14 @@
                     android:layout_width="match_parent"
                     android:layout_gravity="center">
 
+                    <com.google.android.gms.ads.AdView
+                        android:id="@+id/adViewAdvTax"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        ads:adSize="SMART_BANNER"
+                        ads:adUnitId="@string/banner_ad_unit_id"/>
 
                     <LinearLayout
                         android:orientation="horizontal"
@@ -1136,7 +1145,14 @@
 
 
                 </LinearLayout>
-
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/adViewAdvanceMain"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    ads:adSize="SMART_BANNER"
+                    ads:adUnitId="@string/banner_ad_unit_id"/>
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
@@ -1147,7 +1163,7 @@
                         android:background="@drawable/sal"
                         android:backgroundTint="@color/colorPrimary"
                         android:textStyle="bold"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginTop="2dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/buttoncalculate"
@@ -1165,7 +1181,7 @@
                         android:background="@drawable/sal"
                         android:backgroundTint="#2E86C1"
                         android:textStyle="bold"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginTop="2dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/advancetaxhelp"
@@ -1534,7 +1550,16 @@
                         android:fadingEdgeLength="10dp"
                         android:ems="10"> </TextView>
 
+
                 </LinearLayout>
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/adViewAdvanceTax"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    ads:adSize="SMART_BANNER"
+                    ads:adUnitId="@string/banner_ad_unit_id"/>
             </LinearLayout>
 
         </ScrollView>

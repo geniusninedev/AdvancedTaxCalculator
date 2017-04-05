@@ -36,9 +36,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.facebook.login.LoginManager;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -46,8 +48,8 @@ import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
 import com.microsoft.windowsazure.mobileservices.http.OkHttpClientFactory;
 import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
 import com.nineinfosys.android.advancedtaxcalculator.DashBord.GetApp;
-import com.nineinfosys.android.advancedtaxcalculator.Login.Contacts;
-import com.nineinfosys.android.advancedtaxcalculator.Login.LoginActivity;
+import com.nineinfosys.android.advancedtaxcalculator.Contacts.Contacts;
+import com.nineinfosys.android.advancedtaxcalculator.LoginActivity.Login;
 import com.squareup.okhttp.OkHttpClient;
 
 import java.net.MalformedURLException;
@@ -92,6 +94,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         DecimalFormat f = new DecimalFormat("##.00");
+
+        MobileAds.initialize(MainActivity.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView) findViewById(R.id.adViewAdvanceTax);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+        AdView mAdView1 = (AdView) findViewById(R.id.adViewAdvTax);
+        AdRequest adRequest1 = new AdRequest.Builder().build();
+        mAdView1.loadAd(adRequest1);
+
+        AdView mAdView2 = (AdView) findViewById(R.id.adViewAdvanceMain);
+        AdRequest adRequest2 = new AdRequest.Builder().build();
+        mAdView2.loadAd(adRequest2);
+
         Configuration config = getResources().getConfiguration();
 
         genderspinner = (Spinner) findViewById(R.id.genderspinnerid);
@@ -422,7 +438,7 @@ public class MainActivity extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if(firebaseAuth.getCurrentUser()==null){
                     Log.e("ForumMainActivity:", "User was null so directed to Login activity");
-                    Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
+                    Intent loginIntent = new Intent(MainActivity.this, Login.class);
                     loginIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     finish();
                     startActivity(loginIntent);
