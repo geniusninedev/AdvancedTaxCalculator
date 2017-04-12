@@ -225,7 +225,7 @@ public class MainActivity extends AppCompatActivity {
 
                     Intent intent=new Intent(MainActivity.this,GetApp.class);
                     startActivity(intent);
-
+                   finish();
 
                 }
 
@@ -483,7 +483,9 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
 
         if (id == R.id.action_logout){
-            closeapp();
+            FirebaseAuth.getInstance().signOut();
+            LoginManager.getInstance().logOut();
+
 
         }
 
